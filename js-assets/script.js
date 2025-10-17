@@ -1,4 +1,9 @@
 // Accordion functionality
+//Code Attribution
+//Title: Accordion
+//Author: W3Schools
+//Date: 2025
+//Link: www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -15,6 +20,10 @@ for (i = 0; i < acc.length; i++) {
 }
 
 // Lightbox functionality for multiple modals
+//Code Attribution
+//Title: Lightbox
+//Author: W3Schools
+//Link: www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_lightbox
 var slideIndex = [1, 1, 1]; // One for each country
 
 function openModal(modalNum) {
