@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css-assets/script.css" />
+
+<h2>Accordion</h2>
+
+<button class="accordion">Thailand</button>
+<div class="panel">
+  <p>Thailand is a Southeast Asian nation known for its tropical beaches, ornate temples, and rich cultural heritage. Bangkok is the vibrant capital city, famous for its street life, grand palaces like the Grand Palace, and Buddhist temples. The country has a population of about 70 million people and Thai is the official language. Thailand is the only Southeast Asian country never colonized by European powers. The cuisine is world-renowned for dishes like pad thai, green curry, and tom yum soup. Tourism is a major industry, with visitors drawn to destinations like Phuket, Chiang Mai, and the islands of Krabi. The country has a constitutional monarchy, and the Thai people have deep reverence for their royal family.</p>
+
+
+<div class="row">
+  <div class="column">
+    <img src="_images/Thailand/Phra-Thinang-Chakri-Maha-Prasat-Grand-Palace-Bangkok.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="_images/Thailand/Railay Beach, Thailand.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="_images/Thailand/Thai-mangoes.webp" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="_images/Thailand/Wat-Arun-and-Chao-Praya-River.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="_images/Thailand/Phra-Thinang-Chakri-Maha-Prasat-Grand-Palace-Bangkok.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="_images/Thailand/Railay Beach, Thailand.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="_images/Thailand/Thai-mangoes.webp" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="_images/Thailand/Wat-Arun-and-Chao-Praya-River.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="_images/Thailand/Phra-Thinang-Chakri-Maha-Prasat-Grand-Palace-Bangkok.jpg" style="width:100%" onclick="currentSlide(1)" alt="The ornate, golden spires and intricate architecture">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="_images/Thailand/Railay Beach, Thailand.jpg" style="width:100%" onclick="currentSlide(2)" alt="Stunning limestone cliffs and turquoise waters">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="_images/Thailand/Thai-mangoes.webp" style="width:100%" onclick="currentSlide(3)" alt="Vibrant local life and cuisine">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="_images/Thailand/Wat-Arun-and-Chao-Praya-River.jpg" style="width:100%" onclick="currentSlide(4)" alt="Spiritual and cultural imagery">
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</div>
+
+<button class="accordion">South Korea</button>
+<div class="panel">
+  <p>South Korea occupies the southern portion of the Korean Peninsula in East Asia. Seoul, the capital, is a massive metropolis blending cutting-edge technology with traditional culture. The country has emerged as a global economic powerhouse, home to major corporations like Samsung, Hyundai, and LG. South Korean pop culture—including K-pop music, K-dramas, and Korean cinema—has achieved worldwide popularity. The country has a population of about 52 million and Korean is the official language. South Korea is known for its advanced technology, fast internet speeds, and innovative consumer electronics. Traditional culture includes Confucian values, hanbok clothing, and cuisine featuring kimchi, bulgogi, and bibimbap. The nation has a democratic government and maintains a complex relationship with North Korea.</p>
+
+
+<div class="row">
+  <div class="column">
+    <img src="_images/South Korea/Bukchon Hanok Village 북촌한옥마을.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="_images/South Korea/Cherry Blossom Festival, Jinhae,South Korea.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="_images/South Korea/Gamcheon Culture Village, Zuid-Korea.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="_images/South Korea/Gyeongbokgung Palace.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="_images/South Korea/Bukchon Hanok Village 북촌한옥마을.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="_images/South Korea/Cherry Blossom Festival, Jinhae,South Korea.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="_images/South Korea/Gamcheon Culture Village, Zuid-Korea.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="_images/South Korea/Gyeongbokgung Palace.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="_images/South Korea/Bukchon Hanok Village 북촌한옥마을.jpg" style="width:100%" onclick="currentSlide(1)" alt="Traditional Korean houses (hanoks)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="_images/South Korea/Cherry Blossom Festival, Jinhae,South Korea.jpg" style="width:100%" onclick="currentSlide(2)" alt="Spring blooms with crowds enjoying them">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="_images/South Korea/Gamcheon Culture Village, Zuid-Korea.jpg" style="width:100%" onclick="currentSlide(3)" alt="Hillside neighborhood with vibrant buildings">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="_images/South Korea/Gyeongbokgung Palace.jpg" style="width:100%" onclick="currentSlide(4)" alt="Traditional architecture with modern city backdrop">
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</div>
+
+<button class="accordion">Italy</button>
+<div class="panel">
+  <p>Italy is a Southern European country shaped like a boot, extending into the Mediterranean Sea. Rome, the capital, was the heart of the ancient Roman Empire and contains iconic landmarks like the Colosseum and Vatican City. Italy has an enormous cultural legacy in art, architecture, music, and cuisine. The country is home to more UNESCO World Heritage Sites than any other nation. With about 60 million people, Italian is the official language. Italian cuisine—pizza, pasta, gelato, espresso—is beloved globally. Other major cities include Milan (fashion capital), Florence (Renaissance art), and Venice (canals and gondolas). Italy is known for its diverse regions, each with distinct traditions, dialects, and specialties. The country is a founding member of the European Union and has a parliamentary republic government.</p>
+
+
+<div class="row">
+  <div class="column">
+    <img src="_images/Italy/Cinque Terre, Part 2.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="_images/Italy/Colosseum.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="_images/Italy/Explore the Enchanting Charm of Trip To Venice Italy.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="_images/Italy/Italy _ Tuscany _ italian countryside🇮🇹🍷.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="_images/Italy/Cinque Terre, Part 2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="_images/Italy/Colosseum.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="_images/Italy/Explore the Enchanting Charm of Trip To Venice Italy.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="_images/Italy/Italy _ Tuscany _ italian countryside🇮🇹🍷.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="_images/Italy/Cinque Terre, Part 2.jpg" style="width:100%" onclick="currentSlide(1)" alt="Colorful cliffside villages overlooking the sea">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="_images/Italy/Colosseum.jpg" style="width:100%" onclick="currentSlide(2)" alt="Ancient amphitheater, ideally at golden hour">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="_images/Italy/Explore the Enchanting Charm of Trip To Venice Italy.jpg" style="width:100%" onclick="currentSlide(3)" alt="Classic romantic waterway scene">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="_images/Italy/Italy _ Tuscany _ italian countryside🇮🇹🍷.jpg" style="width:100%" onclick="currentSlide(4)" alt="Rolling hills with cypress trees and vineyards">
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
